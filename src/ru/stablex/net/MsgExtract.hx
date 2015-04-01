@@ -38,7 +38,7 @@ class MsgExtract <Message>{
 
         while( p <= last && !complete ){
             #if !flash
-                complete = (buf.readString(p, delimiter.length) == delimiter);
+				complete = (buf.getString(p, delimiter.length) == delimiter);
             #else
                 var i : Int = 0;
                 while( i < delimiter.length && i <= last && buf.get(p + i) == StringTools.fastCodeAt(delimiter, i) ){
@@ -50,7 +50,7 @@ class MsgExtract <Message>{
         }
 
         if( complete ){
-            return new MsgExtract(StringTools.trim(buf.readString(pos, p - pos - 1)), p - pos + delimiter.length - 1);
+            return new MsgExtract(StringTools.trim(buf.getString(pos, p - pos - 1)), p - pos + delimiter.length - 1);
         }else{
             return null;
         }
