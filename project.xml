@@ -2,17 +2,20 @@
 <project>
 	<!-- NMML reference: https://gist.github.com/1763850 -->
 	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-	<meta title="StablexNet.git" package="StablexNet.git" version="1.0.0" company="pm" />
+	<meta title="Simple OpenFL chat client" package="com.example" version="1.0.0" company="pm" />
 	
 	<!-- output -->
-	<app main="ClientMain" file="StablexNet.git" path="bin" />
+	<app path="bin" file="openflclient" main="com.example.ClientMain"  />
 	
 	<window background="0xFFFFFF" fps="30" />
 	<window width="800" height="480" unless="mobile" />
 	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
 	
-	<!-- classpath, haxe libs -->
+	<!-- classpath -->
+	<source path="examples/chat/com/example" />
 	<source path="src" />
+	
+	<!-- haxelibs -->
 	<haxelib name="openfl" />
 	<haxelib name="actuate" />
 	
