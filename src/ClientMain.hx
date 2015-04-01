@@ -10,7 +10,7 @@ import ru.stablex.net.SxServer;
  * @author pm
  */
 
-class Main extends Sprite 
+class ClientMain extends Sprite 
 {
 
 	public function new() 

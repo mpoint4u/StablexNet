@@ -5,9 +5,9 @@
 	<meta title="StablexNet.git" package="StablexNet.git" version="1.0.0" company="pm" />
 	
 	<!-- output -->
-	<app main="Main" file="StablexNet.git" path="bin" />
+	<app main="ClientMain" file="StablexNet.git" path="bin" />
 	
-	<window background="#000000" fps="60" />
+	<window background="0xFFFFFF" fps="30" />
 	<window width="800" height="480" unless="mobile" />
 	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
 	
